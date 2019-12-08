@@ -59,7 +59,7 @@ class IPMan:
         key = header_name
         value = header_val
         # check and enter
-        if len(key) > 0 and isinstance(key, str) and len(value) > 0 and isinstance(value, str):
+        if len(key) > 0 and isinstance(key, str)
             self.__headers[key] = value
         else:
             print('[ipman] - could not add header due to invalid data')
@@ -69,7 +69,7 @@ class IPMan:
     def add_data(self, data_name, data_value):
         key = data_name
         value = data_value
-        if len(key) > 0 and isinstance(key, str) and len(value) > 0 and isinstance(value, str):
+        if len(key) > 0 and isinstance(key, str)
             self.__data[key] = value
         else:
             print('[ipman] - could not add payload due to invalid data')
@@ -79,7 +79,7 @@ class IPMan:
     def add_param(self, param_name, param_value):
         key = param_name
         value = param_value
-        if len(key) > 0 and isinstance(key, str) and len(value) > 0 and isinstance(value, str):
+        if len(key) > 0 and isinstance(key, str)
             self.__params[key] = value
         else:
             print('[ipman] - could not add param due to invalid data')
@@ -88,9 +88,9 @@ class IPMan:
     # add files for upload using POST
     def add_file(self, file_name, file_path):
         key = file_name
-        value = open(file_path, 'rb')
-        if len(key) > 0 and isinstance(key, str) and len(value) > 0 and isinstance(value, str):
-            self.__files[key] = value
+        value = file_path
+        if len(key) > 0 and isinstance(key, str) and len(str(value)) > 0
+            self.__files[key] = open(file_path, 'rb')
         else:
             print('[ipman] - could not add file due to an error caused with file')
 
